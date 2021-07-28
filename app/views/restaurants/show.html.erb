@@ -10,11 +10,30 @@
   Category: <%= @restaurant.category %>
 </p>
 
+<p>
+  Phone Number: <%= @restaurant.phone_number %>
+</p>
+
 <%= link_to "See all Restaurants",
   restaurants_path, class: "btn btn-primary" %>
 
-<%= link_to "Update Restaurant",
+<%= link_to "Edit Restaurant",
   edit_restaurant_path, class: "btn btn-primary" %>
 
 <%= link_to "Delete Restaurant",
   restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>
+
+<%= link_to "Create a review",
+  new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+
+<br>
+<br>
+
+<h3>Reviews</h3>
+
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li> <%= review.content  %> | Rating : <%= review.rating  %> </li>
+  <% end %>
+
+</ul>
