@@ -13,5 +13,8 @@
 <%= link_to "See all Restaurants",
   restaurants_path, class: "btn btn-primary" %>
 
-<%= link_to "Update a Restaurant",
+<%= link_to "Update Restaurant",
   edit_restaurant_path, class: "btn btn-primary" %>
+
+<%= link_to "Delete Restaurant",
+  restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>
