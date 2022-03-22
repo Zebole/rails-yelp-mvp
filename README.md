@@ -1,4 +1,4 @@
-# Clone of YELP app using Ruby on Rails
+# MVP of YELP app using Ruby on Rails
 
 Users can :
 * See all restaurants
